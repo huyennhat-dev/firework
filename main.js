@@ -10,13 +10,15 @@ function setup() {
     gravity = createVector(0, 0.3);
     stroke(255);
     strokeWeight(4);
+
+
     background(0);
 }
 
 function draw() {
     colorMode(RGB);
     background(0, 30);
-    if (random(1, 20) < 2) {
+    if (random(1, 100) < 2) {
         fireworks.push(new Firework(width, height, gravity));
     }
     for (let i = fireworks.length - 1; i >= 0; i--) {

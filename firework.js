@@ -3,7 +3,7 @@ class Firework {
         this.width = width;
         this.height = height;
         this.gravity = gravity;
-        this.hue = random(255);
+        this.hue = random(0, 360);
         this.firework = new Particle(
             random(this.width),
             this.height,
@@ -35,13 +35,29 @@ class Firework {
         if (!this.exploded) this.firework.show();
         for (let i = this.particles.length - 1; i >= 0; i--) {
             this.particles[i].show();
-            if (this.particles[i].done()) this.particles.splice(i, 1)
+            if (this.particles[i].done()) this.particles.splice(i, 1);
         }
     }
     explode() {
         for (let i = 0; i <= random(0, 1000); i++) {
-            const particle = new Particle(this.firework.position.x, this.firework.position.y, false, this.hue, this.multiColor);
+            const particle = new Particle(
+                this.firework.position.x,
+                this.firework.position.y,
+                false,
+                this.hue,
+                this.multiColor
+            );
             this.particles.push(particle);
+            for (let i = 0; i <= random(0, 5); i++) {
+                const particle2 = new Particle(
+                    this.particles[i].position.x,
+                    this.particles[i].position.y,
+                    false,
+                    this.hue,
+                    this.multiColor
+                );
+                this.particles.push(particle2);
+            }
         }
     }
     done() {

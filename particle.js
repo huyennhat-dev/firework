@@ -10,7 +10,7 @@ class Particle {
             this.velocity = createVector(0, random(maxHeight * 0.7, maxHeight));
         } else {
             this.velocity = p5.Vector.random3D();
-            this.velocity.mult(random(5, 35));
+            this.velocity.mult(random(5, 40));
         }
         this.acceleration = createVector(0, 0);
         this.moveLeft = random(1) < 0.5 ? -1 : 1;
@@ -26,6 +26,7 @@ class Particle {
         if (!this.firework) {
             this.velocity.mult(random(0.85, 0.92));
             this.lifeSpan -= random(0, 10);
+
         }
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity);
