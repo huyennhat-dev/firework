@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <canvas id="birthday"></canvas>
+    <canvas id="happynewyear"></canvas>
 
     <script>
         const PI2 = Math.PI * 2
@@ -162,17 +162,17 @@
             }
         }
 
-        let canvas = document.getElementById('birthday')
+        let canvas = document.getElementById('happynewyear')
         let ctx = canvas.getContext('2d')
 
         let then = timestamp()
 
-        let birthday = new Birthday
-        window.onresize = () => birthday.resize()
-        document.onclick = evt => birthday.onClick(evt)
-        document.ontouchstart = evt => birthday.onClick(evt)
+        let happynewyear = new HappyNewYear
+        window.onresize = () => happynewyear.resize()
+        document.onclick = evt => happynewyear.onClick(evt)
+        document.ontouchstart = evt => happynewyear.onClick(evt)
 
-        ;
+        
         (function loop() {
             requestAnimationFrame(loop)
 
