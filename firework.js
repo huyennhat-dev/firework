@@ -3,7 +3,7 @@ class Firework {
         this.width = width;
         this.height = height;
         this.gravity = gravity;
-        this.hue = random(0, 360);
+        this.hue = random(255);
         this.firework = new Particle(
             random(this.width),
             this.height,
