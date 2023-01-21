@@ -13,7 +13,7 @@ class Firework {
         );
         this.exploded = false;
         this.particles = [];
-        this.multiColor = random(0, 20) < 2;
+        this.multiColor = random(0, 20) <3;
     }
 
     update() {
