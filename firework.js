@@ -39,7 +39,7 @@ class Firework {
         }
     }
     explode() {
-        for (let i = 0; i <= random(0, 1000); i++) {
+        for (let i = 0; i <= random(0, 500); i++) {
             const particle = new Particle(
                 this.firework.position.x,
                 this.firework.position.y,
@@ -48,10 +48,10 @@ class Firework {
                 this.multiColor
             );
             this.particles.push(particle);
-            for (let i = 0; i <= random(0, 5); i++) {
+            for (let j = 0; j <= random(0, 5); j++) {
                 const particle2 = new Particle(
-                    this.particles[i].position.x,
-                    this.particles[i].position.y,
+                    this.particles[j].position.x,
+                    this.particles[j].position.y,
                     false,
                     this.hue,
                     this.multiColor
