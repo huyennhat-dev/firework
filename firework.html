@@ -167,7 +167,7 @@
 
         let then = timestamp()
 
-        let happynewyear = new HappyNewYear
+        let happynewyear = new HappyNewYear()
         window.onresize = () => happynewyear.resize()
         document.onclick = evt => happynewyear.onClick(evt)
         document.ontouchstart = evt => happynewyear.onClick(evt)
