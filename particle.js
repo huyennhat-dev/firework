@@ -24,7 +24,7 @@ class Particle {
     }
     update() {
         if (!this.firework) {
-            this.velocity.mult(random(0.85, 0.92));
+            this.velocity.mult(random(0.5, 0.92));
             this.lifeSpan -= random(0, 10);
 
         }
